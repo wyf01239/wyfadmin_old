@@ -114,6 +114,8 @@ Echo loading.........
 set /p wyfcommand=C:\Users\System32)
 if %wyfcommand%==exit goto go
 
+if %wyfcommand%==cls goto cls
+
 if %wyfcommand%==wyfver goto wyfver
 if %wyfcommand%==ver goto wyfver
 
@@ -161,6 +163,10 @@ goto wyfto
 :appopen
 app.bat
 goto go
+:cls
+cls
+Echo loading.........
+goto wyfto
 :kfzmode
 cls
 Echo (Developer Mode)
