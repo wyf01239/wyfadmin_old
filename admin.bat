@@ -137,8 +137,8 @@ goto wyfto
 start help.html
 goto wyfto
 :wyfver
-echo wyfcommand and wyfadmin version 1.0.0
-echo Copyright 2019-2020 wyf. All Rights Reserved.
+echo wyfadmin version 1.0.0
+echo Copyright 2019-2021 wyf. All Rights Reserved.
 goto wyfto
 :systemver
 ver
