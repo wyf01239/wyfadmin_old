@@ -85,6 +85,7 @@ Echo (exit:quit)
 Echo (help:open help)
 :goto
 set /p s=%pro%
+if %s%==W:\desktop\wyfadmin\wyfwz.calc.wyfxk goto wyfxk
 if %s%==exit exit
 if %s%==help goto help
 if %s%==cls goto cls
@@ -115,8 +116,24 @@ cls
 goto goto
 :wz
 set /p pro=prompt=
+if %pro%==F:\360MoveData\Users\Administrator\Desktop\wyfwz.calc.wyfxk goto wyfxk
 set /p tit=title=
 title %tit%
+set c=1
+set w=1
+cls
+Echo cancel camouflage=qwz
+cls
+cls
+Echo cancel camouflage=qwz
+cls
+cls
+Echo cancel camouflage=qwz
+cls
+goto goto
+:wyfxk
+title wyf
+set pro=wyf)
 set c=1
 set w=1
 cls

@@ -3,33 +3,6 @@ color 0a
 title wyftx
 :go
 ver
-Echo loading
-cls
-ver
-Echo loading.
-cls
-ver
-Echo loading..
-cls
-ver
-Echo loading...
-cls
-ver
-Echo loading....
-cls
-ver
-Echo loading.....
-cls
-ver
-Echo loading......
-cls 
-ver
-Echo loading.......
-cls
-ver
-Echo loading........
-cls
-ver
 Echo loading.........
 Echo Input time=(second)
 :goto

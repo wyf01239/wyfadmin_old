@@ -33,151 +33,60 @@ cls
 ver
 Echo loading.........
 :goto
-Echo pattern list:
-Echo original edition command(original)
-Echo wyf edition command(wyf)
-Echo exit (exit)
-set /p pattern=pattern choice 
-if %pattern%==original goto patterngo
-if %pattern%==wyf goto wyfgo
-if %pattern%==exit exit
-if %pattern%==kfzmode goto kfzmode
-Echo pattern invalid
+set /p com=%cd%:
+if %com%==kfzmode goto kfzmode
+
+if %com%==cls goto cls
+
+if %com%==ver goto wyfver
+
+if %com%==sysver goto systemver
+
+if %com%==help goto wyfhelp
+
+if %com%==ping goto ping
+
+if %com%==wyf goto newwyf
+
+if %com%==app goto appopen
+%com%
 goto goto
-:patterngo
-cls
-ver
-Echo loading
-cls
-ver
-Echo loading.
-cls
-ver
-Echo loading..
-cls
-ver
-Echo loading...
-cls
-ver
-Echo loading....
-cls
-ver
-Echo loading.....
-cls
-ver
-Echo loading......
-cls 
-ver
-Echo loading.......
-cls
-ver
-Echo loading........
-cls
-ver
-Echo loading.........
-:patternto
-set /p pcommand=C:\Users\System32)
-%pcommand%
-goto patternto
-:wyfgo
-cls
-ver
-Echo loading
-cls
-ver
-Echo loading.
-cls
-ver
-Echo loading..
-cls
-ver
-Echo loading...
-cls
-ver
-Echo loading....
-cls
-ver
-Echo loading.....
-cls
-ver
-Echo loading......
-cls 
-ver
-Echo loading.......
-cls
-ver
-Echo loading........
-cls
-ver
-Echo loading.........
-:wyfto
-set /p wyfcommand=C:\Users\System32)
-if %wyfcommand%==exit goto go
-
-if %wyfcommand%==cls goto cls
-
-if %wyfcommand%==wyfver goto wyfver
-if %wyfcommand%==ver goto wyfver
-
-if %wyfcommand%==systemver goto systemver
-if %wyfcommand%==sysver goto systemver
-
-if %wyfcommand%==help goto wyfhelp
-
-if %wyfcommand%==ddos-n goto ddosn
-if %wyfcommand%==ddos-t goto ddost
-
-if %wyfcommand%==wyf goto newwyf
-
-if %wyfcommand%==appopen goto appopen
-if %wyfcommand%==app goto appopen
-Echo command invalid
-goto wyfto
 :wyfhelp
-start help.html
-goto wyfto
+echo https://wyf9.bj.bcebos.com/wyf/helps/admin/101/help.html/
+goto goto
 :wyfver
-echo wyfadmin version 1.0.0
+echo wyfadmin version 1.1.0
 echo Copyright 2019-2021 wyf. All Rights Reserved.
-goto wyfto
+echo email:
+echo 1.wyf01299@163.com
+echo 2.wyf01239@163.com
+goto goto
 :systemver
 ver
 start %windir%\system32\winver.exe
-goto wyfto
-:ddosn
-set /p ddosn=ping -l 65500 -n n=
-set /p ddosip=ping -l 65500 -n %ddosn% ip=
-Echo implementcommand ping -l 65500 -n %ddosn% %ddosip%
+goto goto
+:ping
+cls
+set /p pingn=ping -n n=
+cls
+set /p pingip=ping -n %pingn% ip=
+cls
+Echo implementcommand ping -n %pingn% %pingip%
 Echo (Ctrl+C)exit
-ping -l 65500 -n %ddosn% %ddosip%
-goto wyfto
-:ddost
-set /p ddosip=ping -l 65500 -t ip=
-Echo implementcommand ping -l -t %ddosip%
-Echo (Ctrl+C)exit
-ping -l 65500 -t %ddosip%
-goto wyfto
+ping -n %pingn% %pingip%
+pause
+cls
+goto goto
 :newwyf
 start admin.bat
-goto wyfto
+goto goto
 :appopen
 app.bat
-goto go
+goto goto
 :cls
 cls
-Echo loading.........
-goto wyfto
+goto goto
 :kfzmode
-cls
-Echo (Developer Mode)
-cls
-cls
-Echo (Developer Mode)
-cls
-cls
-Echo (Developer Mode)
-cls
-cls
-Echo (Developer Mode)
-Echo Under development.........
-set /p command=
+set kfz=true
+Echo kfzmode On
+goto go
