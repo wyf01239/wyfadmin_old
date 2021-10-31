@@ -33,6 +33,9 @@ cls
 ver
 Echo loading.........
 :goto
+echo Wyfadmin Version %wver%.
+echo Copyright wyf9. All Rights Reserved.
+echo %date% %time%
 set /p com=%cd%:
 if %com%==kfzmode goto kfzmode
 
@@ -55,8 +58,8 @@ goto goto
 echo https://wyf9.bj.bcebos.com/wyf/helps/admin/101/help.html/
 goto goto
 :wyfver
-echo wyfadmin version 1.1.0
-echo Copyright 2019-2021 wyf. All Rights Reserved.
+echo wyfadmin version %wver%
+echo Copyright wyf9. All Rights Reserved.
 echo email:
 echo 1.wyf01299@163.com
 echo 2.wyf01239@163.com
